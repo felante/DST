@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Don't Starve Together</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Don't Starve Together has 18 unique characters to choose from, all with their own unique abilities that contribute to significantly differring playstyles">
+        <link rel="stylesheet" href="shared.css">
+
+        <style>
+            .margins {
+                margin-left: 15px;
+            }
+            .marginsp {
+                margin-left: 15px;
+                font-size: 1.5em;
+            }
+            .charicon{
+                height: 274px;
+                width: 274px;
+                border: 1px solid #FFF;
+                border-top: 0px;
+                border-right: 0px;
+            }
+            .charicon a{
+                display: block;
+                height: 100%;
+                width: 100%;
+                }
+            #charselected{
+                height: 549px;
+                width: 549px;
+                border: 1px solid #FFF;
+                border-top: 0px;
+            }
+            #charselectedimg{
+                height: 500px;
+                width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(img/Random_Character.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #charselectedtext{
+                height: 49px;
+                width: 549px;
+                text-align: center;
+            }
+            .chariconfin{
+                height: 274px;
+                width: 274px;
+                border: 1px solid #FFF;
+                border-top: 0px;
+            }
+            .chariconfin a{
+                display: block;
+                height: 100%;
+                width: 100%;
+                }
+            #wilson{
+                background-image: url(img/Portraits/Wilson_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wilson:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #willow{
+                background-image: url(img/Portraits/Willow_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #willow:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wolfgang{
+                background-image: url(img/Portraits/Wolfgang_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wolfgang:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wendy{
+                background-image: url(img/Portraits/Wendy_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wendy:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wx-78{
+                background-image: url(img/Portraits/WX-78_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wx-78:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wickerbottom{
+                background-image: url(img/Portraits/Wickerbottom_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wickerbottom:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #woodie{
+                background-image: url(img/Portraits/Woodie_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #woodie:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wes{
+                background-image: url(img/Portraits/Wes_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wes:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #waxwell{
+                background-image: url(img/Portraits/Waxwell_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #waxwell:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wigfrid{
+                background-image: url(img/Portraits/Wigfrid_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wigfrid:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #webber{
+                background-image: url(img/Portraits/Webber_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #webber:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #warly{
+                background-image: url(img/Portraits/Warly_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #warly:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wormwood{
+                background-image: url(img/Portraits/Wormwood_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wormwood:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #winona{
+                background-image: url(img/Portraits/Winona_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #winona:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wortox{
+                background-image: url(img/Portraits/Wortox_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wortox:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wurt{
+                background-image: url(img/Portraits/Wurt_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wurt:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #walter{
+                background-image: url(img/Portraits/Walter_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #walter:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #wanda{
+                background-image: url(img/Portraits/Wanda_Portrait.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #wanda:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="main">
+            <div id ="header" class="flex">
+                <div id="banner">
+                    <a href="homepage.html"></a>
+                </div> <!--#banner-->
+
+                <div class="column">
+                    <div id="characters">
+                    </div> <!--#characters-->
+                    <div id="activenavtext">
+                        <a href="characters.html">Characters</a>
+                    </div> <!--#activenavtext-->
+                </div> <!--.column-->
+
+                <div class="column">
+                    <div id="seasons">
+                    </div> <!--#seasons-->
+                    <div class="navtext">
+                        <a href="seasons.html">Seasons</a>
+                    </div> <!--#navtext-->
+                </div> <!--.column-->
+
+                <div class="column">
+                    <div id="bosses">
+                    </div> <!--#bosses-->
+                    <div class="navtext">
+                        <a href="bosses.html">Raid Bosses</a>
+                    </div> <!--#navtext-->
+                </div> <!--.column-->
+            </div> <!--#header-->
+
+            <div id="content" class ="column">
+                <div id="intro">
+                    <p class ="marginsp">Don't Starve Together has 18 different playable characters, each with different unique pros and cons that contribute to significantly different playstyles!  
+                    <br>
+                    <br>    
+                    Click on them to learn their names and characteristics.</p>
+                </div> <!--#intro-->
+
+                <div class="flex">
+                    <div class="column">
+                        <div id ="wilson" class="charicon">
+                            <a href="#charselected"></a>
+                        </div> <!--#wilson .charicon-->
+
+                        <div id ="wolfgang" class="charicon">
+                            <a href="#charselected"></a>
+                        </div> <!--#wolfgang .charicon-->
+                    </div> <!--.column-->
+
+                    <div class="column">
+                        <div id="willow" class="charicon">
+                            <a href="#charselected"></a>
+                        </div> <!--#willow .charicon-->
+                        
+                        <div id="wendy" class="charicon">
+                            <a href="#charselected"></a>
+                        </div> <!--#wendy .charicon-->
+                    </div> <!--.column-->
+
+                    <div id="charselected" class="column">
+                        <div id="charselectedtext">
+                            <h1>Select A Character</h1>
+                        </div> <!--charselectedtext-->
+                        
+                        <div id="charselectedimg">
+
+                        </div> <!--#charselectedimg-->
+
+                    </div> <!--#charselected-->
+                </div> <!--flex-->
+
+                <div class ="flex">
+                    <div id="wx-78" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#wx-78 .charicon-->
+
+                    <div id="wickerbottom" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#wickerbottom .charicon-->
+
+                    <div id="woodie" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#woodie .charicon-->
+
+                    <div id="wes" class="chariconfin">
+                        <a href="#charselected"></a>
+                    </div> <!--#wes chariconfin-->
+                </div> <!--.flex-->
+
+                <div class ="flex">
+                    <div id="waxwell" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#waxwell .charicon-->
+
+                    <div id="wigfrid" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#wigfrid .charicon-->
+
+                    <div id="webber" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#webber .charicon-->
+
+                    <div id="warly" class="chariconfin">
+                        <a href="#charselected"></a>
+                    </div> <!--#warly .chariconfin-->
+                </div> <!--.flex-->
+
+                <div class ="flex">
+                    <div id="wormwood" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#wormwood .charicon-->
+
+                    <div id="winona" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#winona .charicon-->
+
+                    <div id="wortox" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#wortox .charicon-->
+
+                    <div id="wurt" class="chariconfin">
+                        <a href="#charselected"></a>
+                    </div> <!--#wurt .chariconfin-->
+                </div> <!--.flex-->
+
+                <div class ="flex">
+                    <div class="charicon">
+
+                    </div> <!--charicon-->
+
+                    <div id="walter" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#walter .charicon-->
+
+                    <div id="wanda" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#wanda .charicon-->
+
+                    <div class="chariconfin">
+
+                    </div> <!--chariconfin-->
+                </div> <!--.flex-->
+
+            </div> <!--#content .columm-->
+        </div> <!--#main-->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src ="smoothscroll/jquery.smoothscroll.min.js"></script>
+
+        <script>
+
+            $('html').smoothScroll();
+
+            $('#wilson').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wilson_DST.png')
+                $('#charselectedtext h1').html('Wilson, The Gentleman Scientist')
+            })
+
+            $('#willow').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Willow_DST.png')
+                $('#charselectedtext h1').html('Willow, The Firestarter')
+            })
+
+            $('#wolfgang').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wolfgang_DST.png')
+                $('#charselectedtext h1').html('Wolfgang, The Strongman')
+            })
+
+            $('#wendy').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wendy_DST.png')
+                $('#charselectedtext h1').html('Wendy, The Bereaved')
+            })
+
+            $('#wx-78').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/WX-78_DST.png')
+                $('#charselectedtext h1').html('WX-78, The Soulless Automaton')
+            })
+
+            $('#wickerbottom').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wickerbottom_DST.png')
+                $('#charselectedtext h1').html('Wickerbottom, The Librarian')
+            })
+
+            $('#woodie').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Woodie_DST.png')
+                $('#charselectedtext h1').html('Woodie, The Lumberjack')
+            })
+
+            $('#wes').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wes_DST.png')
+                $('#charselectedtext h1').html('Wes, The Silent')
+            })
+
+            $('#waxwell').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Maxwell_DST.png')
+                $('#charselectedtext h1').html('Maxwell, The Puppetmaster')
+            })
+
+            $('#wigfrid').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wigfrid_DST.png')
+                $('#charselectedtext h1').html('Wigfrid, The Performance Artist')
+            })
+
+            $('#webber').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Webber_DST.png')
+                $('#charselectedtext h1').html('Webber, The Indigestible')
+            })
+
+            $('#warly').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Warly_DST.png')
+                $('#charselectedtext h1').html('Warly, The Culinarian')
+            })
+
+            $('#wormwood').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wormwood_DST.png')
+                $('#charselectedtext h1').html('Wormwood, The Lonesome')
+            })
+
+            $('#winona').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Winona_DST.png')
+                $('#charselectedtext h1').html('Winona, The Handywoman')
+            })
+
+            $('#wortox').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wortox_DST.png')
+                $('#charselectedtext h1').html('Wortox, The Soul Starved')
+            })
+
+            $('#wurt').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wurt_DST.png')
+                $('#charselectedtext h1').html('Wurt, The Half-Pint')
+            })
+
+            $('#walter').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Walter_DST.png')
+                $('#charselectedtext h1').html('Walter, The Fearless')
+            })
+
+            $('#wanda').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/Portraits2/Wanda_DST.png')
+                $('#charselectedtext h1').html('Wanda, The Timekeeper')
+            })
+        </script>
+
+    </body>
+</html>

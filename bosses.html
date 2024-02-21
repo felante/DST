@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Don't Starve Together</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Don't Starve Together has various raid bosses in addition to the seasonal bosses that one must seek out and summon on their own if they are interested in their rare and powerful drops">
+        <link rel="stylesheet" href="shared.css">
+
+        <style>
+            .margins {
+                margin-left: 15px;
+            }
+            .marginsp {
+                margin-left: 15px;
+                font-size: 1.5em;
+            }
+            .charicon{
+                height: 274px;
+                width: 274px;
+                border: 1px solid #FFF;
+                border-top: 0px;
+                border-right: 0px;
+            }
+            .charicon a{
+                display: block;
+                height: 100%;
+                width: 100%;
+                }
+            #charselected{
+                height: 549px;
+                width: 549px;
+                border: 1px solid #FFF;
+                border-top: 0px;
+            }
+            #charselectedimg{
+                height: 500px;
+                width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(img/Random_Character.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #charselectedtext{
+                height: 49px;
+                width: 549px;
+                text-align: center;
+            }
+            .chariconfin{
+                height: 274px;
+                width: 274px;
+                border: 1px solid #FFF;
+                border-top: 0px;
+            }
+            .chariconfin a{
+                display: block;
+                height: 100%;
+                width: 100%;
+                }
+            #ancientguardian{
+                background-image: url(img/bosses/ancientguardian.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #ancientguardian:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #beequeen{
+                background-image: url(img/bosses/beequeen.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #beequeen:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #celestialchamp{
+                background-image: url(img/bosses/celestialchamp.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #celestialchamp:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #crabking{
+                background-image: url(img/bosses/crabking.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #crabking:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #Dragonfly{
+                background-image: url(img/bosses/Dragonfly.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #Dragonfly:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #eyeofterror{
+                background-image: url(img/bosses/eyeofterror.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #eyeofterror:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #retinazor{
+                background-image: url(img/bosses/retinazor.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #retinazor:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #spazmatism{
+                background-image: url(img/bosses/spazmatism.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #spazmatism:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #klaus{
+                background-image: url(img/bosses/klaus.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #klaus:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #fruitflylord{
+                background-image: url(img/bosses/fruitflylord.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #fruitflylord:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #malbatross{
+                background-image: url(img/bosses/malbatross.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #malbatross:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #ancientfuelweaver{
+                background-image: url(img/bosses/ancientfuelweaver.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #ancientfuelweaver:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #shadowknight{
+                background-image: url(img/bosses/shadowknight.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #shadowknight:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #shadowrook{
+                background-image: url(img/bosses/shadowrook.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #shadowrook:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #shadowbishop{
+                background-image: url(img/bosses/shadowbishop.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #shadowbishop:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #spiderqueen{
+                background-image: url(img/bosses/spiderqueen.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #spiderqueen:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #toadstool{
+                background-image: url(img/bosses/toadstool.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #toadstool:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            #treeguard{
+                background-image: url(img/bosses/treeguard.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+            }
+            #treeguard:hover{
+                transition: all 1s;
+                background-color: red;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="main">
+            <div id ="header" class="flex">
+                <div id="banner">
+                    <a href="homepage.html"></a>
+                </div> <!--#banner-->
+
+                <div class="column">
+                    <div id="characters">
+                    </div> <!--#characters-->
+                    <div class="navtext">
+                        <a href="characters.html">Characters</a>
+                    </div> <!--.activenavtext-->
+                </div> <!--.column-->
+
+                <div class="column">
+                    <div id="seasons">
+                    </div> <!--#seasons-->
+                    <div class="navtext">
+                        <a href="seasons.html">Seasons</a>
+                    </div> <!--#navtext-->
+                </div> <!--.column-->
+
+                <div class="column">
+                    <div id="bosses">
+                    </div> <!--#bosses-->
+                    <div id="activenavtext">
+                        <a href="bosses.html">Raid Bosses</a>
+                    </div> <!--#activenavtext-->
+                </div> <!--.column-->
+            </div> <!--#header-->
+
+            <div id="content" class ="column">
+                <div id="intro">
+                    <p class ="marginsp">Don't Starve Together has a myriad of raid bosses with very powerful drops in addition to their seasonal bosses.  
+                    <br>
+                    <br>    
+                    Click on them to learn their names, see some of their alternate forms, and learn their drops!</p>
+                </div> <!--#intro-->
+
+                <div class="flex">
+                    <div class="column">
+                        <div id ="ancientguardian" class="charicon">
+                            <a href="#charselected"></a>
+                        </div> <!--#ancientguardian .charicon-->
+
+                        <div id ="celestialchamp" class="charicon">
+                            <a href="#charselected"></a>
+                        </div> <!--#celestialchamp .charicon-->
+                    </div> <!--.column-->
+
+                    <div class="column">
+                        <div id="beequeen" class="charicon">
+                            <a href="#charselected"></a>
+                        </div> <!--#beequeen .charicon-->
+                        
+                        <div id="crabking" class="charicon">
+                            <a href="#charselected"></a>
+                        </div> <!--#crabking .charicon-->
+                    </div> <!--.column-->
+
+                    <div id="charselected" class="column">
+                        <div id="charselectedtext">
+                            <h1>Select A Character</h1>
+                        </div> <!--charselectedtext-->
+                        
+                        <div id="charselectedimg">
+
+                        </div> <!--#charselectedimg-->
+
+                    </div> <!--#charselected-->
+                </div> <!--flex-->
+
+                <div class ="flex">
+                    <div id="Dragonfly" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#Dragonfly .charicon-->
+
+                    <div id="eyeofterror" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#eyeofterror .charicon-->
+
+                    <div id="retinazor" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#retinazor .charicon-->
+
+                    <div id="spazmatism" class="chariconfin">
+                        <a href="#charselected"></a>
+                    </div> <!--#spazmatism chariconfin-->
+                </div> <!--.flex-->
+
+                <div class ="flex">
+                    <div id="klaus" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#klaus .charicon-->
+
+                    <div id="fruitflylord" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#fruitflylord .charicon-->
+
+                    <div id="malbatross" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#malbatross .charicon-->
+
+                    <div id="ancientfuelweaver" class="chariconfin">
+                        <a href="#charselected"></a>
+                    </div> <!--#ancientfuelweaver .chariconfin-->
+                </div> <!--.flex-->
+
+                <div class ="flex">
+                    <div id="shadowknight" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#shadowknight .charicon-->
+
+                    <div id="shadowrook" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#shadowrook .charicon-->
+
+                    <div id="shadowbishop" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#shadowbishop .charicon-->
+
+                    <div id="spiderqueen" class="chariconfin">
+                        <a href="#charselected"></a>
+                    </div> <!--#spiderqueen .chariconfin-->
+                </div> <!--.flex-->
+
+                <div class ="flex">
+                    <div class="charicon">
+
+                    </div> <!--charicon-->
+
+                    <div id="toadstool" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#toadstool .charicon-->
+
+                    <div id="treeguard" class="charicon">
+                        <a href="#charselected"></a>
+                    </div> <!--#treeguard .charicon-->
+
+                    <div class="chariconfin">
+
+                    </div> <!--chariconfin-->
+                </div> <!--.flex-->
+
+            </div> <!--#content .columm-->
+        </div> <!--#main-->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src ="smoothscroll/jquery.smoothscroll.min.js"></script>
+
+        <script>
+
+            $('html').smoothScroll();
+
+            $('#ancientguardian').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedancientguardian.png')
+                $('#charselectedtext h1').html('Ancient Guardian, drops Ancient Horn and Ancient Key')
+            })
+
+            $('#beequeen').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/beequeen.png')
+                $('#charselectedtext h1').html('Bee Queen, drops Bee Queen Crown and Bundling Wrap Blueprint')
+            })
+
+            $('#celestialchamp').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedcelestialchamp.png')
+                $('#charselectedtext h1').html('Celestial Champion, drops Enlightened Crown')
+            })
+
+            $('#crabking').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedcrabking.png')
+                $('#charselectedtext h1').html('Crab King, drops Celestial Tribute')
+            })
+
+            $('#Dragonfly').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enrageddragonfly.png')
+                $('#charselectedtext h1').html('Dragonfly, drops All Gems and Scales')
+            })
+
+            $('#eyeofterror').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedeyeofterror.png')
+                $('#charselectedtext h1').html('Eye of Terror, drops Milky Whites and Eye Mask')
+            })
+
+            $('#retinazor').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedretinazor.png')
+                $('#charselectedtext h1').html('Retinazor, drops Yellow Gem and Gears')
+            })
+
+            $('#spazmatism').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedspazmatism.png')
+                $('#charselectedtext h1').html('Spazmatism, drops Green Gem and Gears')
+            })
+
+            $('#klaus').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedklaus.png')
+                $('#charselectedtext h1').html('Klaus, drops Bundled Gifts')
+            })
+
+            $('#fruitflylord').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/fruitflylord.png')
+                $('#charselectedtext h1').html('Lord of the Fruit Flies, drops Friendly Fruit Fly Fruit')
+            })
+
+            $('#malbatross').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/malbatross.png')
+                $('#charselectedtext h1').html('Malbatross, drops Malbatross Bill and Malbatross Feathers')
+            })
+
+            $('#ancientfuelweaver').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/ancientfuelweaver.png')
+                $('#charselectedtext h1').html('Ancient Fuelweaver, drops Bone Helm and Bone Armor')
+            })
+
+            $('#shadowknight').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedshadowknight.png')
+                $('#charselectedtext h1').html('Shadow Knight, drops Nightmare Gear and Shadow Atrium')
+            })
+
+            $('#shadowrook').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedshadowrook.png')
+                $('#charselectedtext h1').html('Shadow Rook, drops Nightmare Gear and Shadow Atrium')
+            })
+
+            $('#shadowbishop').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedshadowbishop.png')
+                $('#charselectedtext h1').html('Shadow Bishop, drops Nightmare Gear and Shadow Atrium')
+            })
+
+            $('#spiderqueen').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/spiderqueen.png')
+                $('#charselectedtext h1').html('Spider Queen, drops Spider Eggs and Spiderhat')
+            })
+
+            $('#toadstool').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/enraged/enragedtoadstool.png')
+                $('#charselectedtext h1').html('Toadstool, drops Shroom Skin and Mushlight')
+            })
+
+            $('#treeguard').click(function(){
+                $('#charselectedimg').css('background-image', 'url(img/bosses/treeguard.png')
+                $('#charselectedtext h1').html('Treeguard, drops Living Logs')
+            })
+        </script>
+
+    </body>
+</html>
